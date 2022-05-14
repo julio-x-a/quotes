@@ -13,6 +13,6 @@ const loadDayQuote = async () => {
 
 const renderQuote = () => {
   const $quote = d.getElementById('quote');
-  const $authot = d.getElementById('author');
+  const $author = d.getElementById('author');
 };
 d.addEventListener('DOMContentLoaded', loadDayQuote);
