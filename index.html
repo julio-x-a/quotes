@@ -4,16 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/output.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body class="bg-[#122b44]">
     <main>
-      <section>
-        <h1 id="quote"></h1>
-        <h3 id="author"></h3>
-        <button id="random">Random</button>
+      <section class="mx-auto text-center">
+        <h1
+          id="quote"
+          class="text-[#00FA7A] text-2xl first-letter:text-6xl sm:text-5xl font-fira font-extralight italic sm:first-letter:text-9xl"
+        ></h1>
+        <h3 id="author" class="text-white sm:text-3xl font-fira"></h3>
+        <!-- <button id="random">Random</button> -->
       </section>
     </main>
     <script src="./src/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   </body>
 </html>
