@@ -8,7 +8,10 @@ module.exports = {
     //   bluewhite: '#1abdae',
     // },
     fontFamily: {
-      fira: ['Fira Code', 'sans-serif'],
+      fira: ['Fira Code', 'consoles'],
+      sans: ['ui-sans-serif', 'system-ui'],
+      serif: ['ui-serif', 'Georgia'],
+      mono: ['ui-monospace', 'SFMono-Regular'],
     },
   },
   plugins: [],

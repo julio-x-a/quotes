@@ -1,3 +1,5 @@
+import './output.css';
+
 const d = document;
 
 const loadDayQuote = async () => {
@@ -13,13 +15,24 @@ const loadDayQuote = async () => {
 };
 
 const renderQuote = (data) => {
-  const $quote = d.getElementById('quote');
+  d.getElementById('quote').textContent = '';
+  d.getElementById('author').textContent = '';
+  d.querySelector('span')?.remove();
   const $author = d.getElementById('author');
-  // $quote.textContent = `"${data.content}"`;
-  $author.textContent = data.author;
+  $author.textContent = `- ${data.author}`;
   var typed = new Typed('#quote', {
-    strings: [data.content],
+    strings: [`"${data.content}"`],
     typeSpeed: 20,
   });
+  d.querySelector('span').classList.add(
+    'text-[#00FA7A]',
+    'text-2xl',
+    'sm:text-5xl',
+    'font-fira',
+    'font-extralight'
+  );
 };
 d.addEventListener('DOMContentLoaded', loadDayQuote);
+d.addEventListener('click', async (e) => {
+  if (e.target.matches('#retry')) loadDayQuote();
+});
