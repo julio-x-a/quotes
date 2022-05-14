@@ -17,7 +17,7 @@ const loadDayQuote = async () => {
 const renderQuote = (data) => {
   d.getElementById('quote').textContent = '';
   d.getElementById('author').textContent = '';
-  d.querySelector('span')?.remove();
+  d.querySelector('.typed-cursor')?.remove();
   const $author = d.getElementById('author');
   $author.textContent = `- ${data.author}`;
   var typed = new Typed('#quote', {
