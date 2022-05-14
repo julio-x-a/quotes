@@ -14,7 +14,12 @@ const loadDayQuote = async () => {
   }
 };
 
+const resetBtn = () => {
+  d.getElementById('retry').disabled = false;
+};
+
 const renderQuote = (data) => {
+  d.getElementById('retry').disabled = true;
   d.getElementById('quote').textContent = '';
   d.getElementById('author').textContent = '';
   d.querySelector('.typed-cursor')?.remove();
@@ -22,7 +27,8 @@ const renderQuote = (data) => {
   $author.textContent = `- ${data.author}`;
   var typed = new Typed('#quote', {
     strings: [`"${data.content}"`],
-    typeSpeed: 20
+    typeSpeed: 20,
+    onComplete: resetBtn
   });
   d.querySelector('span').classList.add(
     'text-[#00FA7A]',
